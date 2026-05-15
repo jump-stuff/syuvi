@@ -2,13 +2,13 @@
 CREATE TABLE tournament_new (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     class TEXT NOT NULL,
-    diamond_map TEXT NOT NULL,
+    diamond_map TEXT,
     platinum_map TEXT NOT NULL,
     gold_map TEXT NOT NULL,
     silver_map TEXT NOT NULL,
     bronze_map TEXT NOT NULL,
     steel_map TEXT NOT NULL,
-    wood_map TEXT NOT NULL,
+    wood_map TEXT,
     starts_at DATETIME NOT NULL,
     ends_at DATETIME NOT NULL,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
