@@ -31,11 +31,11 @@ function startTourneyJob(datetime, channels) {
     });
     channels.get(timesChannelIds.get("Platinum")).send({
       content: `🏁 A ${tourney.class} tourney has started! The map is..`,
-      embeds: [await getMapEmbedByName(tourney.plat_gold_map)],
+      embeds: [await getMapEmbedByName(tourney.platinum_map)],
     });
     channels.get(timesChannelIds.get("Gold")).send({
       content: `🏁 A ${tourney.class} tourney has started! The map is..`,
-      embeds: [await getMapEmbedByName(tourney.plat_gold_map)],
+      embeds: [await getMapEmbedByName(tourney.gold_map)],
     });
     channels.get(timesChannelIds.get("Silver")).send({
       content: `🏁 A ${tourney.class} tourney has started! The map is..`,
@@ -214,8 +214,8 @@ async function updateSignupsJob(channel) {
           const embed = EmbedBuilder.from(divisionEmbed).setDescription(
             playersInDivisionSplit[i]
               ? inlineCode(
-                  playersInDivisionSplit[i].map((player) => player.display_name).join(", "),
-                )
+                playersInDivisionSplit[i].map((player) => player.display_name).join(", "),
+              )
               : "\u200b",
           );
           await channel.send({ embeds: [embed] });

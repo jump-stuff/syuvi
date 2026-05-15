@@ -109,10 +109,7 @@ function getMapSelectModal(tourneyClass) {
   const bronzeMapRow = new ActionRowBuilder().addComponents(bronzeMap);
   const steelMapRow = new ActionRowBuilder().addComponents(steelMap);
   const woodMapRow = new ActionRowBuilder().addComponents(woodMap);
-  modal.addComponents(platGoldMapRow, silverMapRow, bronzeMapRow, steelMapRow);
-  // if (tourneyClass === "Soldier") {
-  modal.addComponents(woodMapRow); // wood only applies to soldier
-  // }
+  modal.addComponents(platGoldMapRow, silverMapRow, bronzeMapRow, steelMapRow, woodMapRow);
   return modal;
 }
 
@@ -193,13 +190,12 @@ ${player.demo_division ? roleMention(divisionRoleIds.get(player.demo_division + 
       },
       {
         name: "Profiles",
-        value: `${
-          player.tempus_id
-            ? `${hyperlink("Tempus Plaza", `https://tempusplaza.com/players/${player.tempus_id}`)}
+        value: `${player.tempus_id
+          ? `${hyperlink("Tempus Plaza", `https://tempusplaza.com/players/${player.tempus_id}`)}
 ${hyperlink("Tempus", `https://tempus2.xyz/players/${player.tempus_id}`)}
 ${hyperlink("Steam", formatSteamURL(player.steam_id))}`
-            : `${inlineCode("No Linked Tempus ID")}`
-        }`,
+          : `${inlineCode("No Linked Tempus ID")}`
+          }`,
       },
     );
   return embed;

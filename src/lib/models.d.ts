@@ -15,12 +15,13 @@ export interface Player {
 export interface Tournament {
   id: string;
   class: string;
-  diamond_map: string?;
-  plat_gold_map: string;
+  diamond_map: string;
+  platinum_map: string;
+  gold_map: string;
   silver_map: string;
   bronze_map: string;
   steel_map: string;
-  wood_map: string?;
+  wood_map: string;
   start_at: DateTimeString;
   ends_at: DateTimeString;
   created_at: DateTimeString;

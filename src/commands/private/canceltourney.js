@@ -73,12 +73,13 @@ async function executeCommand(interaction) {
   const channel = await interaction.channel;
   await interaction.editReply({
     content: `Active tourney found with maps..
-Diamond Map: ${inlineCode(tourney.diamond_map)}
-Platinum / Gold Map: ${inlineCode(tourney.plat_gold_map)}
-Silver Map: ${inlineCode(tourney.silver_map)}
-Bronze Map: ${inlineCode(tourney.bronze_map)}
-Steel Map: ${inlineCode(tourney.steel_map)}
-Wood Map: ${inlineCode(tourney.wood_map)}`,
+    Diamond Map: ${inlineCode(tourney.diamond_map)}
+    Platinum Map: ${inlineCode(tourney.platinum_map)}
+    Gold Map: ${inlineCode(tourney.gold_map)}
+    Silver Map: ${inlineCode(tourney.silver_map)}
+    Bronze Map: ${inlineCode(tourney.bronze_map)}
+    Steel Map: ${inlineCode(tourney.steel_map)}
+    Wood Map: ${inlineCode(tourney.wood_map)}`,
   });
 
   const confirmMessage = await channel.send({

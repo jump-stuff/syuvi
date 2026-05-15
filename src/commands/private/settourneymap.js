@@ -15,7 +15,8 @@ export default {
         .setRequired(true)
         .addChoices(
           { name: "Diamond", value: "Diamond" },
-          { name: "PlatGold", value: "PlatGold" },
+          { name: "Platinum", value: "Platinum" },
+          { name: "Gold", value: "Gold" },
           { name: "Silver", value: "Silver" },
           { name: "Bronze", value: "Bronze" },
           { name: "Steel", value: "Steel" },
@@ -41,8 +42,11 @@ export default {
           case "Diamond":
             tourney.diamond_map = mapName;
             break;
-          case "PlatGold":
-            tourney.plat_gold_map = mapName;
+          case "Platinum":
+            tourney.platinum_map = mapName;
+            break;
+          case "Gold":
+            tourney.gold_map = mapName;
             break;
           case "Silver":
             tourney.silver_map = mapName;
@@ -60,12 +64,13 @@ export default {
         updateTourneyMap(tourney);
 
         interaction.editReply(`${tourney.class} tournament maps updated to..
-Diamond Map: ${inlineCode(tourney.diamond_map)}
-Platinum / Gold: ${inlineCode(tourney.plat_gold_map)}
-Silver: ${inlineCode(tourney.silver_map)}
-Bronze: ${inlineCode(tourney.bronze_map)}
-Steel: ${inlineCode(tourney.steel_map)}
-${tourney.class === "Soldier" ? `Wood: ${inlineCode(tourney.wood_map)}` : `Wood: ${inlineCode(tourney.wood_map)}`}`);
+  Diamond: ${inlineCode(tourney.diamond_map)}
+  Platinum: ${inlineCode(tourney.platinum_map)}
+  Gold: ${inlineCode(tourney.gold_map)}
+  Silver: ${inlineCode(tourney.silver_map)}
+  Bronze: ${inlineCode(tourney.bronze_map)}
+  Steel: ${inlineCode(tourney.steel_map)}
+  Wood: ${inlineCode(tourney.wood_map)}`);
       }
     }
   },

@@ -10,8 +10,9 @@ function getTourneyMap(tourney, division) {
     case "Diamond":
       return tourney.diamond_map;
     case "Platinum":
+      return tourney.platinum_map;
     case "Gold":
-      return tourney.plat_gold_map;
+      return tourney.gold_map;
     case "Silver":
       return tourney.silver_map;
     case "Bronze":

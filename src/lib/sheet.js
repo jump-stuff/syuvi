@@ -116,8 +116,8 @@ async function createTourneySheet(tourney) {
   };
 
   mapCells.diamond.value = tourney.diamond_map;
-  mapCells.platinum.value = tourney.plat_gold_map;
-  mapCells.gold.value = tourney.plat_gold_map;
+  mapCells.platinum.value = tourney.platinum_map;
+  mapCells.gold.value = tourney.gold_map;
   mapCells.silver.value = tourney.silver_map;
   mapCells.bronze.value = tourney.bronze_map;
   mapCells.steel.value = tourney.steel_map;

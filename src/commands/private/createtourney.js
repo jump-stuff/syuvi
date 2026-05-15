@@ -190,7 +190,8 @@ class Tournament {
    *
    * @param {string} tourneyClass
    * @param {string} diamondMap
-   * @param {string} platGoldMap
+   * @param {string} platinumMap
+   * @param {string} goldMap
    * @param {string} silverMap
    * @param {string} bronzeMap
    * @param {string} steelMap
@@ -201,7 +202,8 @@ class Tournament {
   constructor(
     tourneyClass,
     diamondMap,
-    platGoldMap,
+    platinumMap,
+    goldMap,
     silverMap,
     bronzeMap,
     steelMap,
@@ -211,7 +213,8 @@ class Tournament {
   ) {
     this.class = tourneyClass;
     this.diamond = diamondMap;
-    this.plat_gold = platGoldMap;
+    this.platinum = platinumMap;
+    this.gold = goldMap;
     this.silver = silverMap;
     this.bronze = bronzeMap;
     this.steel = steelMap;
@@ -271,6 +274,7 @@ async function executeCommand(interaction) {
       tourneyClass,
       submittedMapFields.getTextInputValue("plat_gold_map"),
       submittedMapFields.getTextInputValue("plat_gold_map"),
+      submittedMapFields.getTextInputValue("plat_gold_map"),
       submittedMapFields.getTextInputValue("silver_map"),
       submittedMapFields.getTextInputValue("bronze_map"),
       submittedMapFields.getTextInputValue("steel_map"),
@@ -286,7 +290,8 @@ async function executeCommand(interaction) {
     const tourneyResponse = await submittedMapResponse.reply({
       content: `${tourneyClass} tournament start date set to ${discordTimestamp}
 Diamond Map: ${inlineCode(submittedTourney.diamond)}
-Platinum / Gold Map: ${inlineCode(submittedTourney.plat_gold)}
+Platinum Map: ${inlineCode(submittedTourney.platinum)}
+Gold Map: ${inlineCode(submittedTourney.gold)}
 Silver Map: ${inlineCode(submittedTourney.silver)}
 Bronze Map: ${inlineCode(submittedTourney.bronze)}
 Steel Map: ${inlineCode(submittedTourney.steel)}
